@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorador de Países</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href=".css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Explorador de Países</h1>
+            <p>Descubra informações sobre todos os países do mundo</p>
+        </header>
+
+        <div class="search-filter-container">
+            <div class="search-box">
+                <input type="text" id="search-input" placeholder="Pesquisar país...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+
+            <div class="filter-container">
+                <select id="region-filter">
+                    <option value="">Todos os continentes</option>
+                    <option value="Africa">África</option>
+                    <option value="Americas">Américas</option>
+                    <option value="Asia">Ásia</option>
+                    <option value="Europe">Europa</option>
+                    <option value="Oceania">Oceania</option>
+                </select>
+
+                <select id="sort-by">
+                    <option value="name-asc">Nome (A-Z)</option>
+                    <option value="name-desc">Nome (Z-A)</option>
+                    <option value="population-asc">População (menor)</option>
+                    <option value="population-desc">População (maior)</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="loading-spinner" id="loading-spinner">
+            <div class="spinner"></div>
+            <p>Carregando países...</p>
+        </div>
+
+        <div class="countries-container" id="countries-container"></div>
+
+        <div class="pagination" id="pagination">
+            <button id="prev-page" disabled><i class="fas fa-chevron-left"></i></button>
+            <span id="page-info">Página 1</span>
+            <button id="next-page"><i class="fas fa-chevron-right"></i></button>
+        </div>
+    </div>
+
+    <script src=".js"></script>
+</body>
+</html>
